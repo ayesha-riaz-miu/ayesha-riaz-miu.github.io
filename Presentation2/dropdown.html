@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* img {
+            position: relative;
+            animation-timing-function: linear;
+            animation: mymove 5s infinite;
+        }  */
+        img{
+            width:100px;
+            height:100px;
+        }
+        div{
+            display:inline-block;
+            position: relative;
+            animation-timing-function: ease;
+            animation: mymove 5s infinite;
+        }
+        .img1 {
+            animation-delay: 0s;
+            animation-duration: 10s;
+        }
+
+        .img2 {
+            animation-delay: -2s;
+        }
+
+        .img3 {
+            animation-delay: -4s;
+        }
+
+        .img4 {
+            animation-delay: -2s;
+            animation-duration: 10s;
+        }
+
+        .img5 {
+            animation-delay: -6s;
+        }
+
+        .img6 {
+            animation-delay: -4s;
+        }
+
+        @keyframes mymove {
+            from {
+                left: 0px;
+                top: 0px;
+            }
+
+            to {
+                left: 0px;
+                top: 750px;
+            }
+
+        }
+
+        .mask1 {
+            -webkit-mask-image: url('/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp');
+            mask-image: url('/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp');
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size:100px;
+        }
+    </style>
+</head>
+
+<body style="background-image:url('/images-2.jpeg');background-size: cover  ;">
+    <div class="mask1 img1">
+        <img src="/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp" style="border: solid;border-radius: 50%;"  >
+    </div>
+    <div class="mask1 img2">
+        <img src="/images.jpeg" >
+    </div>
+    <div class="mask1 img3">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+    <div class="mask1 img4">
+        <img src="../../images/bluerain.jpeg"  >
+    </div>
+    <div class="mask1 img5">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+
+    <div class="mask1 img1">
+        <img src="../../images/extremeRain.jpeg" >
+    </div>
+    <div class="mask1 img2">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+    <div class="mask1 img3">
+        <img src="../../images/bluerain.jpeg"  >
+    </div>
+    <div class="mask1 img4">
+        <img src="../../images/bluerain.jpeg"  >
+    </div>
+    <div class="mask1 img5">
+        <img src="../../images/extremeRain.jpeg" >
+    </div>
+
+    <div class="mask1 img1">
+        <img src="../../images/bluerain.jpeg"  >
+    </div>
+    <div class="mask1 img2">
+        <img src="../../images/bluerain.jpeg"  >
+    </div>
+    <div class="mask1 img3">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+    <div class="mask1 img4">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+    <div class="mask1 img5">
+        <img src="../../images/extremeRain.jpeg"  >
+    </div>
+    <!-- <div class="mask1 img6">
+        <img src="/images/extremeRain.jpeg"  width="250" height="300">
+    </div> -->
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>
