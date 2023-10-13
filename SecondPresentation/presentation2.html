@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+  <style>
+    .setimage {
+      height: 100px;
+    }
+
+    .carousel-inner {
+      align-items: center;
+    }
+
+    .moveimage {
+      position: relative;
+      animation-name: example;
+      animation-duration: 4s;
+    }
+
+    @keyframes example {
+      0% {
+
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+
+        left: 350px;
+        top: 0px;
+      }
+
+    }
+
+    .moveimage1 {
+      position: relative;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-delay: 4s;
+    }
+
+    .moveimage2 {
+      position: relative;
+      animation-name: example1;
+      animation-duration: 2s;
+
+    }
+
+    @keyframes example1 {
+      0% {
+
+        left: 0px;
+        top: 0px;
+      }
+
+      25% {
+
+        left: 0px;
+        top: 200pxpx;
+      }
+
+    }
+
+    .div {
+      display: inline-block;
+      position: relative;
+      animation-timing-function: ease;
+      animation: mymove 5s infinite;
+    }
+
+    .img1 {
+      animation-delay: 0s;
+      animation-duration: 10s;
+    }
+
+    .img2 {
+      animation-delay: -2s;
+    }
+
+    .img3 {
+      animation-delay: -4s;
+    }
+
+    .img4 {
+      animation-delay: -2s;
+      animation-duration: 10s;
+    }
+
+    .img5 {
+      animation-delay: -6s;
+    }
+
+    .img6 {
+      animation-delay: -4s;
+    }
+
+
+    @keyframes mymove {
+      from {
+        left: 0px;
+        top: 0px;
+      }
+
+      to {
+        left: 0px;
+        top: 50px;
+      }
+
+    }
+
+    .mask1 {
+      -webkit-mask-image: url('/SecondPresentation/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp');
+      mask-image: url('/SecondPresentation/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp');
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: 100px;
+    }
+
+    .multipleimages {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      background-image: url(/SecondPresentation/images\ \(1\).jpeg);
+      animation-name: examples;
+      animation-duration: 6s;
+
+    }
+
+    @keyframes examples {
+      0% {
+        background-image: url(/SecondPresentation/download\ \(3\).jpeg)
+      }
+
+      50% {
+        background-image: url(/SecondPresentation/download\ \(1\).jpeg)
+      }
+
+      100% {
+        background-image: url(/SecondPresentation/download\ \(2\).jpeg)
+      }
+    }
+  </style>
+
+</head>
+
+<body style="background-image: url(/SecondPresentation/images-3.jpeg);width: 200px;">
+  <!-- first part -->
+  <div>
+    <div style="display: flex;gap: 10px;position: relative;left: 100px;margin: 20px;">
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Home
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Girls</a></li>
+          <li><a class="dropdown-item" href="#">Toddler Girls</a></li>
+          <li><a class="dropdown-item" href="#">Boys</a></li>
+          <li><a class="dropdown-item" href="#">Toddler Boys</a></li>
+          <li><a class="dropdown-item" href="#">Shoes</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Girls
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+          <li><a class="dropdown-item" href="#">School Uniforms</a></li>
+          <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+          <li><a class="dropdown-item" href="#">Dresses & Skirtalls</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Toddler Girls
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+          <li><a class="dropdown-item" href="#">School Uniforms</a></li>
+          <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+          <li><a class="dropdown-item" href="#">Dresses</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Boys
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+          <li><a class="dropdown-item" href="#">School Uniforms</a></li>
+          <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+          <li><a class="dropdown-item" href="#">Jeans</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Toddler Boys
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+          <li><a class="dropdown-item" href="#">School Uniforms</a></li>
+          <li><a class="dropdown-item" href="#">Graphic Tees</a></li>
+          <li><a class="dropdown-item" href="#">Jeans</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+      <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          Shoes
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Girls Shoes</a></li>
+          <li><a class="dropdown-item" href="#">Toddler Girls Shoes</a></li>
+          <li><a class="dropdown-item" href="#">Boys Shoes</a></li>
+          <li><a class="dropdown-item" href="#">Toddler Boys Shoes</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">show More</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- second part -->
+    <div style="display: grid;grid-template-columns: 2fr 1fr;">
+      <div style="margin: 30px;">
+        <div class="moveimage"><img src="/SecondPresentation/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp"
+            style="height: 150px;" /></div>
+
+        <div class="moveimage1"><img src="/SecondPresentation/download.jpeg"></div>
+
+      </div>
+     
+      <div>
+        <div style="width: 200px;position: absolute;left: 600px;margin: 30px;">
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/SecondPresentation/3040400_IV.png.avif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/SecondPresentation/3041909_BQ.png.avif" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="/SecondPresentation/3043534_32PF.png.avif" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- third part -->
+  <div style="display: grid;grid-template-columns: 1fr 2fr 1fr;gap: 20px;">
+    <div style="margin: 20px;">
+      <div class="mask1 img1 div">
+        <img src="/SecondPresentation/images88.jpeg" width="200px">
+      </div>
+      <div class="mask1 img2 div">
+        <img src="/SecondPresentation/375c3301-a9ed-4436-95cc-f0e2ae4aa973.009931e7db02ac48a4858c8053458e82 copy.jpeg.webp" width="200px">
+      </div>
+      <div class="mask1 img3 div">
+        <img src="/SecondPresentation/71xuKJVIfeL._AC_UY1100_.jpg" width="200px">
+      </div>
+      <div class="mask1 img4 div">
+        <img src="/SecondPresentation/download (4).jpeg" width="200px">
+      </div>
+    </div>
+    <div>
+      <div style="margin: 20px;">
+        <div class="mask1 img1 div">
+          <img src="/SecondPresentation/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp" width="200px">
+        </div>
+        <div class="mask1 img2 div">
+          <img src="/SecondPresentation/images-4.jpeg" width="200px">
+        </div>
+        <div class="mask1 img3 div">
+          <img src="/SecondPresentation/Kids-Modeling-Can-Your-Kid-Be-A-Model-And-How-624x702.jpg.webp" width="200px">
+        </div>
+        <div class="mask1 img4 div">
+          <img src="/SecondPresentation/375c3301-a9ed-4436-95cc-f0e2ae4aa973.009931e7db02ac48a4858c8053458e82 copy.jpeg.webp"
+            width="200px">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="multipleimages">
+
+      <!-- <img class="multipleimages" src="="position: absolute; left: 500px;padding: 50px;"/>  -->
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
