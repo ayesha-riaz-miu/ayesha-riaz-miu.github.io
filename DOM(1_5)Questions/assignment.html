@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        ul li:nth-child(3){
+            color:red
+        }
+        ol li:nth-child(2)
+        {
+            color:blue;
+        }
+        table tr:nth-child(2)
+        {
+            color: brown;
+        }
+     </style>
+    <script>
+        function clickme(){
+            // 1.Change Text of Div,P,textInput,link
+            let div=document.querySelector('div')
+               div.innerHTML="I change my div.."
+            let p=document.querySelector('p')
+            p.innerHTML="I also change my p " +p.innerHTML;
+            let textarea=document.querySelector(' textarea')
+            textarea.innerHTML="change the text"
+            let a=document.querySelector('a')
+            a.setAttribute("href",'https://www.apple.com')
+            a.innerHTML="Apple";
+            // 2.Change the image
+            let img=document.querySelector('img')
+            img.setAttribute("src",'/Alaska.webp')
+            // 3.change the address of link, 
+            //Change the value of textInput,textArea
+            let input=document.querySelector('input')
+            input.setAttribute("value",'Enter Name')
+        }
+
+    function newElement(){
+        //4. Create and add Div,p,img,link, textInput,textArea,button,
+        //checkbox,radio,label
+        let div=document.createElement('div');
+        div.innerHTML="Add using API";
+        document.body.append(div);
+
+        let inputtext=document.createElement('input')
+        inputtext.setAttribute("type",'text')
+        inputtext.setAttribute("value",'Enter flower name:')
+        document.getElementById('myP').before(inputtext)
+      //5. Create and add Table and ordered and unordered List elements
+       //unorder list
+         let list=document.querySelector('ul li:nth-child(3)')
+         let li=document.createElement('li')
+         li.innerHTML="orange";
+          list.after(li)
+        //order list
+          let list1=document.querySelector('ol li:nth-child(2)')
+          let li1=document.createElement('li')
+          li1.innerHTML="India";
+          list1.after(li1);
+          //add table
+          let newrow=document.createElement('tr')
+          newrow.innerHTML="<td>col:1</td> <td>col:2</td> <td>col:3</td>";
+          
+          document.querySelector('tr').after(newrow)
+    }
+       
+    </script>
+</head>
+<body>
+    <input type="text" value="Name"/>
+    <div>My name</div>
+    <br/>
+    <img src="/chrysanthumum.jpeg" height="50px"/>
+    <br/>
+    <table>
+        <tr>
+            <td>col:1</td>
+            <td>col:2</td>
+            <td>col:3</td>
+        </tr>
+    </table>
+    <p id="myP">Hello every one</p>
+    <textarea>whats going on</textarea>
+    <br/>
+    <a href="https://www.google.com">google</a>
+    <br/>
+    <br/>
+   <ul>
+    <li>apple</li>
+    <li>banana</li>
+    <li>peach</li>
+   </ul>
+   <ol>
+    <li>Pakistan</li>
+    <li>Chine</li>
+    <li>USA</li>
+   </ol>
+    <button onclick="clickme();">select</button>
+    <button onclick="newElement();">Create Element</button>
+</body>
+</html>
