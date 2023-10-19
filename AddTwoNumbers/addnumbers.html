@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addition(){
+            let firstnumber=document.getElementById('number1')
+            let secondnumber=document.getElementById('number2')
+            let finalresult=document.getElementById('result')
+            finalresult.value=parseInt(firstnumber.value)+parseInt(secondnumber.value)
+
+            console.log(firstnumber.setAttribute('class','myclass'))
+           
+
+            let p=document.getElementById('para')
+            p.innerHTML= "Done the addition";
+            
+
+        }
+    </script>
+</head>
+<body>
+    <P id="para">Here enter your data</P>
+    a:<input type="text" id="number1"/>
+    b:<input type="text" id="number2"/>
+    <button onclick="addition();">submit</button>
+   
+    <br/>
+    <br/>
+    a+b:<input type="text" id="result"/>
+    
+</body>
+</html>
