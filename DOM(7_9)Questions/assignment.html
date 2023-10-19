@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .enter{
+            background-color: red;
+            color: black;
+            border: 3px;
+           
+           
+           
+        }
+    </style>
+    <script>
+        function clickme(){
+            // 7. Create a page with Input text field, when User enters text and hits submit, 
+            //clear the text, i.e. the input field should be blank;
+         let input=document.querySelector('input[type="text"]')
+        //    input.value=""
+        //  document.querySelector('input').value.dispaly=" "
+          //8. Create a page with Textarea, as the User enters the input and submit, 
+          //show the text at the top along with PREVIOUS ENTRIES (as shown in the picture).
+        let textarea=document.querySelector('textarea');
+           textarea.value= textarea.value+" "+input.value
+        }
+        function swap(){
+             //9. Swap the text of two input text fields
+             let name=document.getElementById('firstvalue')
+             let alias=document.getElementById('secondvalue')
+             let swap=name.value;
+             name.value=alias.value;
+             alias.value=swap;
+        }
+       
+    </script>
+</head>
+<body>
+    <textarea></textarea>
+    <br/>
+    <input type="text" />
+    
+    <input type="button" value="submit" onclick="clickme();"/>
+    <hr>
+    Name:<input type="text" id="firstvalue">
+    Alias:<input type="text" id="secondvalue">
+   
+    <input type="button" value="Enter" class="enter" onclick="swap();">
+
+</body>
+</html>
