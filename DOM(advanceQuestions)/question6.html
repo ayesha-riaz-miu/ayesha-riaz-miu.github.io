@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 6:Filter and Reset Arrays -->
+    <script>
+        function startA(){
+            let select=document.querySelector('select[name="select"]')
+           let fruits=["apple","banana","pear"]
+           let fruit1;
+           for(let i=0;i<fruits.length;i++)
+           {
+            if(fruits[i].charAt(0)=='a')
+               fruit1 =fruits[i]
+           }
+           select.value=fruit1;
+           console.log(fruit1)
+
+
+        }
+    </script>
+</head>
+<body>
+    <select name="select">
+        <option value="apple">apple</option>
+        <option value="banana" selected>banana</option>
+        <option value="pear">pear</option>
+       
+    </select>
+    <button onclick="startA();">starts with A</button>
+    <button onclick="startA();">Button</button>
+</body>
+</html>
