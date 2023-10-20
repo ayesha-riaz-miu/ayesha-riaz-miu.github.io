@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- 1:Create and Prepopulate all Form Controls in DOM -->
+    <script>
+        window.onload=function(){
+            let div=document.createElement('div')
+            document.body.append(div)
+            div.innerHTML=' <label class="myclass">country</label>'+
+    '<select>'+
+        '<option>java</option>'+
+        '<option >javascript</option>'+
+        '<option selected>python</option>'+
+    '     </select>'
+        
+        let Radiodiv=document.createElement('div')
+        Radiodiv.innerHTML=' <label>Gender</label>'+
+    '<input type="radio"/>Male'+
+    '<input type="radio"/>Female'
+     document.body.append(Radiodiv)
+        }
+    </script>
+</head>
+<body>
+    
+  
+
+</body>
+</html>
