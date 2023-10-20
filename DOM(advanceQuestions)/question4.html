@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 4:Display parts of page Conditionally -->
+    <script>
+        function clickme(){
+           let select=document.querySelector('select[name="select1"] option:checked')
+           console.log(select)
+            if(select.value=='Vedas')
+            {
+                let div=document.createElement('div')
+                   div.innerHTML='<input type="checkbox" />Rig'+
+        '<input type="checkbox" />Yajur'+
+        '<input type="checkbox" />Adarvana'+
+        '<input type="checkbox" />Sama'
+        let label=document.querySelector('label')
+        document.body.append(div)
+            }
+            //let select1=document.querySelector('select[name="select1"] option:checked')
+            else if(select.value=='Upanishads'){
+
+                let div=document.createElement('div')
+                div.innerHTML=' <input type="checkbox" />Aiterya'+
+        '<input type="checkbox" />Brihadarankya'+
+        '<input type="checkbox" />Chandogya'+
+        '<input type="checkbox" />Chandogya'
+        document.body.append(div)
+        
+            }
+        }
+       
+    </script>
+</head>
+<body>
+   
+        <label>Scriptures</label>
+        <select name="select1">
+            <option value="Vedas">Vedas</option>
+            <option value="Upanishads">Upanishads</option>
+            </select>
+            <button onclick="clickme();">Show</button>
+
+        
+</body>
+</html>
