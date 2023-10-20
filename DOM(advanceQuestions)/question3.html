@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 3:Change Display Conditionally -->
+    <script>
+      function button1(){
+        let p=document.createElement('p')
+        p.innerHTML="Bananas are yellow in color";
+        let div=document.querySelector('div')
+        div.after(p)
+
+      }
+      function button2(){
+        let input=document.querySelector('input');
+       if(input.style.visibility='visible'){
+        input.style.visibility='hidden'
+       }
+       else if(input.style.visibility='hidden')
+       input.style.visibility='visible'
+      }
+    </script>
+</head>
+<body>
+    <div>Display</div>
+    <button id="button1" onclick="button1();">submit</button>
+    <div>Visibility</div>
+    <input type="text">
+    <button id="button2" onclick="button2();">submit</button>
+</body>
+</html>
