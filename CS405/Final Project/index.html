@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+    function clickme(){
+      let arr=["X","O"]
+      let input1=document.getElementById('input1')
+      let value1=input1.value
+     
+      // console.log(value1)
+      let input2=document.getElementById('input2')
+      let value2=input2.value
+      let input3=document.getElementById('input3')
+      let value3=input3.value
+      let input4=document.getElementById('input4')
+      let value4=input4.value
+      let input5=document.getElementById('input5')
+      let value5=input5.value
+      let input6=document.getElementById('input6')
+      let value6=input6.value
+      let input7=document.getElementById('input7')
+      let value7=input7.value
+      let input8=document.getElementById('input8')
+      let value8=input8.value
+      let input9=document.getElementById('input9')
+      let value9=input9.value
+      let button=document.querySelector('button')
+      
+      // console.log(value2)
+      // for(let i=0;i<arr.length-1;i++)
+      //   {
+      //     if((value1==arr[0] && value5==arr[0] && value9==arr[0] ) || (value1==arr[1] && value5==[1] && value9==arr[1] ))
+        
+       if(((value1=='X' && value5=='X' && value9=='X' ) || (value1=='O' && value5=='O' && value9=='O' ))||((value3=='X' && value5=='X' && value7=='X' ) || (value3=='O' && value5=='O' && value7=='O' ))
+       ||((value1=='X' && value4=='X' && value7=='X' ) || (value1=='O' && value4=='O' && value7=='O' ))||((value2=='X' && value5=='X' && value8=='X' ) || (value2=='O' && value5=='O' && value8=='O' ))
+       ||((value3=='X' && value6=='X' && value9=='X' ) || (value3=='O' && value6=='O' && value9=='O' ))||((value1=='X' && value2=='X' && value3=='X' ) || (value1=='O' && value2=='O' && value3=='O' ))
+       ||((value4=='X' && value5=='X' && value6=='X' ) || (value4=='O' && value5=='O' && value6=='O' ))||((value7=='X' && value8=='X' && value9=='X' ) || (value7=='O' && value8=='O' && value9=='O' )))  
+      {
+       
+        let message=document.createElement('h1')
+        message.innerHTML=" YOU_WON"
+        message.style.color='purple'
+        message.style.textAlign='center'
+        button.before(message)
+      }
+
+      else
+      {
+        let message=document.createElement('h1')
+        message.innerHTML="TRY_AGAIN"
+        message.style.color='purple'
+        message.style.textAlign='center'
+        
+        button.before(message)
+        console.log("TRY AGAIN")
+      }
+      if((value1=='X' && value5=='X' && value9=='X' )||(value3=='X' && value5=='X' && value7=='X' )||(value1=='X' && value4=='X' && value7=='X' ) 
+         ||(value2=='X' && value5=='X' && value8=='X' ) ||(value3=='X' && value6=='X' && value9=='X' ) 
+         ||(value1=='X' && value2=='X' && value3=='X' )||(value4=='X' && value5=='X' && value6=='X' )||(value7=='X' && value8=='X' && value9=='X' ) )
+    {
+      let winername=document.createElement('h1')
+      winername.innerHTML="X"
+      winername.style.color='purple';
+      winername.style.textAlign='center'
+      button.before(winername)
+    }
+    else if((value1=='O' && value5=='O' && value9=='O' )||(value3=='O' && value5=='O' && value7=='O')||(value1=='O' && value4=='O' && value7=='O' )
+        ||(value2=='O' && value5=='O' && value8=='O' )||(value3=='O' && value6=='O' && value9=='O' )||(value1=='O' && value2=='O' && value3=='O' )
+        ||(value4=='O' && value5=='O' && value6=='O' )||(value7=='O' && value8=='O' && value9=='O' ))
+    {
+      let winername1=document.createElement('h1')
+      winername1.innerHTML="O"
+      winername1.style.color='purple';
+      winername1.style.textAlign='center'
+      button.before(winername1)
+    }
+     
+     
+      
+      
+    }
+      
+          
+  </script>
+   
+    <style>
+      .title{
+        text-align: center;
+        color: purple;
+        font-size: 50px;
+      }
+      .contanier{
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        background-image: url(/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+        margin: 30px;
+        padding: 30px;
+      
+       
+      }
+      .textarea{
+        padding: 10px;
+        border: 2px solid purple;
+        background-image: url(/images.jpeg);
+        text-align: center;
+        left: 60px;
+        height: 50px;
+        position: relative;
+        left: 510px;
+        cursor: pointer;
+        
+      
+      }
+      .button{
+            background-image: url(/images.jpeg);
+            color: purple;
+            width: 120px;
+            height: 50px;
+            border:2px solid purple;
+            border-radius: 50px;
+            position: relative;
+            left: 550px;
+            margin: 100px;
+            font-size: 30px;
+            
+      }
+      .status{
+         font-size: 50px;
+         color: purple;
+         margin: 20px ;
+         position: relative;
+         left: 400px;
+
+      }
+      P{
+        font-size: 30px;
+         color: purple;
+         margin-left: 30PX;
+         font-weight: bolder;
+      }
+      
+
+    </style>
+</head>
+<body style="background-image: url(/Free-blue-gradient-pattern-background-from-Fotor.webp)">
+    <div >
+        <h1 class="title">tic_tac_toe</h1>
+        <div class="contanier">
+          <input type="text" class="textarea"  id="input1" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input2" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input3" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input4" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input5" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input6" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input7" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input8" style="color: purple;font-size: larger;font-weight: bold;">
+          <input type="text" class="textarea"  id="input9" style="color: purple;font-size: larger;font-weight: bold;">
+          
+           
+        </div>
+        <P>Use Capital:X Capital:O</P>
+        <h3 class="status"></h3>
+        <button class="button" onclick="clickme();">Enter</button>
+    </div>
+    
+    
+</body>
+</html>
+
+  
