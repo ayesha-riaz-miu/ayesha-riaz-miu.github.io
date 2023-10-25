@@ -34,10 +34,10 @@
       //   {
       //     if((value1==arr[0] && value5==arr[0] && value9==arr[0] ) || (value1==arr[1] && value5==[1] && value9==arr[1] ))
         
-       if(((value1=='X' && value5=='X' && value9=='X' ) || (value1=='O' && value5=='O' && value9=='O' ))||((value3=='X' && value5=='X' && value7=='X' ) || (value3=='O' && value5=='O' && value7=='O' ))
-       ||((value1=='X' && value4=='X' && value7=='X' ) || (value1=='O' && value4=='O' && value7=='O' ))||((value2=='X' && value5=='X' && value8=='X' ) || (value2=='O' && value5=='O' && value8=='O' ))
-       ||((value3=='X' && value6=='X' && value9=='X' ) || (value3=='O' && value6=='O' && value9=='O' ))||((value1=='X' && value2=='X' && value3=='X' ) || (value1=='O' && value2=='O' && value3=='O' ))
-       ||((value4=='X' && value5=='X' && value6=='X' ) || (value4=='O' && value5=='O' && value6=='O' ))||((value7=='X' && value8=='X' && value9=='X' ) || (value7=='O' && value8=='O' && value9=='O' )))  
+       if(((value1=='x' && value5=='x' && value9=='x' ) || (value1=='o' && value5=='o' && value9=='o' ))||((value3=='x' && value5=='x' && value7=='x' ) || (value3=='o' && value5=='o' && value7=='o' ))
+       ||((value1=='x' && value4=='x' && value7=='x' ) || (value1=='o' && value4=='o' && value7=='o' ))||((value2=='x' && value5=='x' && value8=='x' ) || (value2=='o' && value5=='o' && value8=='o' ))
+       ||((value3=='x' && value6=='x' && value9=='x' ) || (value3=='o' && value6=='o' && value9=='o' ))||((value1=='x' && value2=='x' && value3=='x' ) || (value1=='o' && value2=='o' && value3=='o' ))
+       ||((value4=='x' && value5=='x' && value6=='x' ) || (value4=='o' && value5=='o' && value6=='o' ))||((value7=='x' && value8=='x' && value9=='x' ) || (value7=='o' && value8=='o' && value9=='o' )))
       {
        
         let message=document.createElement('h1')
@@ -57,19 +57,18 @@
         button.before(message)
         console.log("TRY AGAIN")
       }
-      if((value1=='X' && value5=='X' && value9=='X' )||(value3=='X' && value5=='X' && value7=='X' )||(value1=='X' && value4=='X' && value7=='X' ) 
-         ||(value2=='X' && value5=='X' && value8=='X' ) ||(value3=='X' && value6=='X' && value9=='X' ) 
-         ||(value1=='X' && value2=='X' && value3=='X' )||(value4=='X' && value5=='X' && value6=='X' )||(value7=='X' && value8=='X' && value9=='X' ) )
+      if((value1=='x' && value5=='x' && value9=='x' )||(value3=='x' && value5=='x' && value7=='x' )||(value1=='x' && value4=='x' && value7=='x' ) 
+         ||(value2=='x' && value5=='x' && value8=='x' ) ||(value3=='x' && value6=='x' && value9=='x' ) 
+         ||(value1=='x' && value2=='x' && value3=='x' )||(value4=='x' && value5=='x' && value6=='x' )||(value7=='x' && value8=='x' && value9=='x' ) )
     {
       let winername=document.createElement('h1')
       winername.innerHTML="X"
       winername.style.color='purple';
       winername.style.textAlign='center'
       button.before(winername)
-    }
-    else if((value1=='O' && value5=='O' && value9=='O' )||(value3=='O' && value5=='O' && value7=='O')||(value1=='O' && value4=='O' && value7=='O' )
-        ||(value2=='O' && value5=='O' && value8=='O' )||(value3=='O' && value6=='O' && value9=='O' )||(value1=='O' && value2=='O' && value3=='O' )
-        ||(value4=='O' && value5=='O' && value6=='O' )||(value7=='O' && value8=='O' && value9=='O' ))
+    }else if((value1=='o' && value5=='o' && value9=='o' )||(value3=='o' && value5=='o' && value7=='o')||(value1=='o' && value4=='o' && value7=='o' )
+        ||(value2=='o' && value5=='o' && value8=='o' )||(value3=='o' && value6=='o' && value9=='o' )||(value1=='o' && value2=='o' && value3=='o' )
+        ||(value4=='o' && value5=='o' && value6=='o' )||(value7=='o' && value8=='o' && value9=='o' ))
     {
       let winername1=document.createElement('h1')
       winername1.innerHTML="O"
