@@ -73,3 +73,5 @@ bank.credit(2, 30); // Credit 30 to customer 2
 
 console.log("Customer 1 Balance:", bank.getBalance(1)); // Should print the balance of customer 1
 console.log("Bank Balance:", bank.bankBalance()); // Should print the total bank balance
+
+
