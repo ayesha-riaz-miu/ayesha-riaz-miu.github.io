@@ -82,3 +82,47 @@ let arr11=[1,2,3]
 let arr21 = [1,2,3,4,5]
 console.log(findProduct(...arr11))
 console.log(findProduct(...arr21))
+
+
+
+
+
+// setInterval version: printNumbers(3, 5) will wait one second then print 3, then one
+// more second then print 4, then one more second then print 5.
+
+function printNumbers(a:number,b:number):void{
+  let startNumber=a;
+  let intervalId=setInterval(()=>{
+    console.log(startNumber)
+    if(startNumber==b){
+      clearInterval(intervalId)
+    }
+    else 
+    startNumber++
+  },1000)
+
+}
+printNumbers(3,5)
+
+
+
+
+// Delay version: printNumbersDelay(3, 5) will immediately print out “Starting in 3
+// seconds”. Then after 3 seconds print 3, then another second print 4, then another
+// second print 5.
+
+
+function printNumbers1(a:number,b:number):void{
+  let startNumber=a;
+  console.log("starting in 3 seconds")
+  let intervalId=setInterval(()=>{
+    console.log(startNumber)
+    if(startNumber==b){
+      clearInterval(intervalId)
+    }
+    else 
+    startNumber++
+  },3000)
+
+}
+printNumbers1(3,5)
