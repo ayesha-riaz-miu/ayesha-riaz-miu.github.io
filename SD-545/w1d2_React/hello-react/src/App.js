@@ -1,14 +1,13 @@
 function App(){
-    const location = ['Fairfield', 'Ottumwa', 'Iowa City'];
 
-    //const list= location.map(city=><li>{city}</li>)
-   
+   const person={
+    name:'Ayesha',
+    gender:'female'
+   }
 
-    return(
-       <ul>
-        {location.map((city,index)=><li key={index}>{city}</li>)}
-       </ul>
-    )
-
+   return (
+    <h1>{person.name} {person.gender}</h1>
+   )
 }
+
 export default App;
