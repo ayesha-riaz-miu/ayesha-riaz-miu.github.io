@@ -3,6 +3,7 @@ function App(){
    const person={
     name:'Ayesha',
     gender:'female'
+    
    }
 
    return (
