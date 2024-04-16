@@ -39,6 +39,12 @@ function App() {
 
 
   }
+  const updateAll = (value: boolean) => {
+    settodo(todos.map(todo => ({...todo, done: value})))
+  }
+  const deleteTodos = () => {
+    settodo(todos.filter(todo => !todo.done));
+  }
  
   
   useEffect(()=>{
@@ -61,7 +67,7 @@ function App() {
       <div className="todo-wrap">
        <Header addtodo={addnew_todo} />
         <List todos={todos} check_box={check_box}  delete_item={delte_item}/>
-        <Footer todos={todos}/>
+        <Footer todos={todos} onUpdateAll={updateAll} onDelete={deleteTodos}/>
       </div>
     </div>
   </div>
