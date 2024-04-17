@@ -7,13 +7,21 @@ import User from './types';
 import userTypes from './types/user';
 
 function App() {
- 
+  const [user,setUsers] = useState<userTypes>({
+    isFirst:true,
+    isLoading:false,
+    isError:false,
+    user:[]
+
+  }
+    
+  )
   return (
     
     <div className="App">
       <div className="container">
-        <Search />
-        <List />
+        <Search  setUser={setUsers}/>
+        <List user={user}/>
     
    
   </div>

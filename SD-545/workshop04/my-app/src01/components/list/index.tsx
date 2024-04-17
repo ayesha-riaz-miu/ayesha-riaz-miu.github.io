@@ -1,38 +1,14 @@
-import PubSub from 'pubsub-js'
-
 import User from '../../types'
 import userTypes from '../../types/user'
 import './index.css'
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 type Props = {
   user: userTypes
 }
-export default function List() {
-  const [users, setUsers] = useState<userTypes>({
-    isFirst: true,
-    isLoading: false,
-    isError: false,
-    user: []
-
-  }
-
-  )
-  const { isFirst, isLoading, isError, user } = users
-
-  useEffect(() => {
-
-    const token = PubSub.subscribe('sd-545', (msg, data) => {
-      setUsers(data)
-
-    })
-    return () => {
-      PubSub.unsubscribe(token)
-    }
-
-  }, [])
-
+export default function List(props: Props) {
+  const { user:{isFirst,isLoading,isError,user} } = props
   return (
     <>
 
@@ -40,7 +16,7 @@ export default function List() {
       {
         isFirst ? <h2>Enter name for search</h2> :
           isLoading ? <h2> Please wait</h2> :
-            isError ? <h2>try again</h2> :
+           isError? <h2>try again</h2> :
               <div className="row">
                 {
                   user.map(user => (
