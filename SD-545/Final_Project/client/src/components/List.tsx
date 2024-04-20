@@ -11,25 +11,25 @@ import React, { useState } from 'react'
 type Props={
     music:Music[]
     searchQuery: string;
-    handleAddToPlaylist:(id:string)=>void
+    your_playlist:(id:string)=>void
 }
 
 export default function List(props:Props) {
-    const {music,searchQuery,handleAddToPlaylist} = props;
-    const [hoveredItemId, setHoveredItemId] = useState<string | null>(null);
+    const {music,searchQuery,your_playlist} = props;
+    const [hovered, setHovered] = useState<string | null>(null);
 
 
     const handleMouseEnter = (itemId: string) => {
-        setHoveredItemId(itemId);
+        setHovered(itemId);
     };
 
     const handleMouseLeave = () => {
-        setHoveredItemId(null);
+        setHovered(null);
     };
 
     const filteredMusic = searchQuery
-        ? music.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
-        : music;
+                          ? music.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
+                          : music;
   
     return (
         <div style={{textAlign:'center',marginLeft:'100px'}} >
@@ -48,11 +48,11 @@ export default function List(props:Props) {
                             <tr key={item.id} 
                             onMouseEnter={() => handleMouseEnter(item.id)}
                             onMouseLeave={handleMouseLeave}
-                            style={{ backgroundColor: hoveredItemId === item.id ? 'blue ': 'transparent' }}>
+                            style={{ backgroundColor: hovered === item.id ? 'blue ': 'transparent' }}>
                                 <th scope="row">{item.id}</th>
                                 <td>{item.title}</td>
                                 <td>{item.releaseDate}</td>
-                                <td><button type="button" className="btn btn-info" onClick={()=>handleAddToPlaylist(item.id)}>+</button></td>
+                                <td><button type="button" className="btn btn-info" onClick={()=>your_playlist(item.id)}>+</button></td>
                             </tr>
 
                         ))
