@@ -19,6 +19,7 @@
         "express": "^4.19.2",
         "helmet": "^5.0.2",
         "jsonwebtoken": "^8.5.1",
+        "react-h5-audio-player": "^3.9.1",
         "uuid": "^8.3.2"
     }
 }

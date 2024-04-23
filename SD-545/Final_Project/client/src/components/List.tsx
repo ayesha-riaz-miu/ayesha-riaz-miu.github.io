@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Playlist from '../types/paylist';
 
 
  interface Music{
@@ -11,7 +12,7 @@ import React, { useState } from 'react'
 type Props={
     music:Music[]
     searchQuery: string;
-    your_playlist:(id:string)=>void
+   your_playlist:(id:string)=>void
 }
 
 export default function List(props:Props) {
@@ -27,9 +28,9 @@ export default function List(props:Props) {
         setHovered(null);
     };
 
-    const filteredMusic = searchQuery
-                          ? music.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
-                          : music;
+    // const filteredMusic = searchQuery
+    //                       ? music.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
+    //                       : music;
   
     return (
         <div style={{textAlign:'center',marginLeft:'100px'}} >
@@ -44,13 +45,13 @@ export default function List(props:Props) {
                 </thead>
                 <tbody className=" hover">
                     {
-                        filteredMusic.map(item => (
+                        music.map((item,index) => (
                             <tr key={item.id} 
                             onMouseEnter={() => handleMouseEnter(item.id)}
                             onMouseLeave={handleMouseLeave}
-                            style={{ backgroundColor: hovered === item.id ? 'blue ': 'transparent' }}>
-                                <th scope="row">{item.id}</th>
-                                <td>{item.title}</td>
+                            >
+                                <th scope="row">{index+1}  </th>
+                                <td style={{ backgroundColor: hovered === item.id ? ' grey ': 'transparent' }}>{item.title}</td>
                                 <td>{item.releaseDate}</td>
                                 <td><button type="button" className="btn btn-info" onClick={()=>your_playlist(item.id)}>+</button></td>
                             </tr>
