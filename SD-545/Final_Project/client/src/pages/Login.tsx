@@ -27,6 +27,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await songServices.Log_in({ username, password });
+      console.log(response)
 
       console.log(response.data.accessToken);
       console.log(response.status)

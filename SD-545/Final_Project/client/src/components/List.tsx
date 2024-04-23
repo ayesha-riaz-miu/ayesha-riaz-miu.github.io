@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Playlist from '../types/paylist';
+
 
 
  interface Music{
@@ -11,12 +11,11 @@ import Playlist from '../types/paylist';
 
 type Props={
     music:Music[]
-    searchQuery: string;
    your_playlist:(id:string)=>void
 }
 
 export default function List(props:Props) {
-    const {music,searchQuery,your_playlist} = props;
+    const {music,your_playlist} = props;
     const [hovered, setHovered] = useState<string | null>(null);
 
 
@@ -28,9 +27,7 @@ export default function List(props:Props) {
         setHovered(null);
     };
 
-    // const filteredMusic = searchQuery
-    //                       ? music.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()))
-    //                       : music;
+    
   
     return (
         <div style={{textAlign:'center',marginLeft:'100px'}} >
@@ -50,10 +47,11 @@ export default function List(props:Props) {
                             onMouseEnter={() => handleMouseEnter(item.id)}
                             onMouseLeave={handleMouseLeave}
                             >
-                                <th scope="row">{index+1}  </th>
+                
+                                <th style={{ backgroundColor: hovered === item.id ? ' grey ': 'transparent' }}scope="row">{index+1}  </th>
                                 <td style={{ backgroundColor: hovered === item.id ? ' grey ': 'transparent' }}>{item.title}</td>
-                                <td>{item.releaseDate}</td>
-                                <td><button type="button" className="btn btn-info" onClick={()=>your_playlist(item.id)}>+</button></td>
+                                <td style={{ backgroundColor: hovered === item.id ? ' grey ': 'transparent' }}>{item.releaseDate} </td>
+                                <td style={{ backgroundColor: hovered === item.id ? ' grey ': 'transparent' }}><button type="button" className="btn btn-info" onClick={()=>your_playlist(item.id)}>+</button></td>
                             </tr>
 
                         ))

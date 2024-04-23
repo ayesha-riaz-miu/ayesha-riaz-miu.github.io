@@ -16,6 +16,7 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
   const [playlist, setPlaylist] = useState<Playlist[]>([]);
   const [currentSong, setCurrentSong] = useState<Songs | null>(null);
+  const [hovered, setHovered] = useState<string | null>(null);
   const [source,setSource]= useState<string>('')
   
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ const userid= sessionStorage.getItem('userId')
         const response = await songServices.Songs_DB();
         const data =  response.data;
         setmusic(data);
+        // console.log("songs",music)
       } catch (e) {
         console.error(e);
       }
@@ -50,6 +52,7 @@ const userid= sessionStorage.getItem('userId')
         );
       
         setPlaylist(filteredPlaylist);
+        // console.log("playlist is here",playlist)
       } catch (error) {
         console.error("Error fetching playlist:", error);
       }
@@ -58,8 +61,6 @@ const userid= sessionStorage.getItem('userId')
     fetchPlaylistData();
  
   }, []);
-
-
 
 
   const handleSearch = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -76,6 +77,7 @@ const songId= id
     const response = await songServices.addPlaylist({songId})
     const data:Playlist[]= await response.data
     setPlaylist(data)
+    console.log("llll",playlist)
    
     
   };
@@ -103,6 +105,13 @@ const songId= id
     navigate('/login')
 
   }
+  const handleMouseEnter = (itemId: string) => {
+    setHovered(itemId);
+};
+
+const handleMouseLeave = () => {
+    setHovered(null);
+};
   
   const musicPlaying= playlist.find((song)=>song.urlPath===source)
   return (
@@ -116,6 +125,8 @@ const songId= id
             <input type="search" className="form-control" placeholder="Search..." aria-label="Search" style={{ marginTop: '50px', width: '600px', marginRight: '20px' }}
               value={searchQuery} onChange={handleSearch} />
           </form>
+
+
               {/* Logout button */}
           <div className="text-end">
             <button type="button" className="btn btn-light text-dark ml-2 " style={{ marginLeft: '700px', marginTop: '-60px' }} onClick={log_out} >Logout</button>
@@ -126,17 +137,11 @@ const songId= id
     
       <div>
 
-             {/* Songs list */}
+
         <h4 style={{ marginLeft: '130px' }}> Songs You May Intrested</h4>
-        <List music={music} searchQuery={searchQuery} your_playlist={handleAdd} />
+        <List music={music}  your_playlist={handleAdd} />
 
 
-
-
-
-
-
-         {/* Your Playlist */}
         <h4 style={{ marginLeft: '100px' }}> Your Playlist ({playlist.length} {playlist.length === 1 ? 'Song' : 'Songs'})</h4>
         {playlist.length === 0 ? (
           <p style={{ marginLeft: '100px' }}>Your playlist is empty.</p>
@@ -156,9 +161,12 @@ const songId= id
             {playlist.map((singlePlay, index) => {
               
               return (
-                <tr key={singlePlay.id}>
-                  <th scope="row">{index + 1}</th>
-                  <td>{singlePlay.title}</td>
+                <tr key={singlePlay.id}
+                onMouseEnter={() => handleMouseEnter(singlePlay.id)}
+                            onMouseLeave={handleMouseLeave}>
+                  
+                  <th style={{ backgroundColor: hovered === singlePlay.id ? ' grey ': 'transparent' }} scope="row">{index + 1}</th>
+                  <td style={{ backgroundColor: hovered === singlePlay.id ? ' grey ': 'transparent' }}>{singlePlay.title}</td>
                   <td>
                     <button type="button" className="btn btn-success" value={singlePlay.urlPath} onClick={Play_song}>Play</button>
 
