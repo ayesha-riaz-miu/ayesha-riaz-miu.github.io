@@ -6,7 +6,7 @@ const instance = axios.create({
   baseURL: "http://localhost:3000/api",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${token}`,
+     Authorization: `Bearer ${token}`,
   },
 });
 
@@ -20,4 +20,4 @@ const instance = axios.create({
 //     }
 // );
 
-export default instance;
+ export default instance;

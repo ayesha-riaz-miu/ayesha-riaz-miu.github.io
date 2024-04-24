@@ -54,8 +54,7 @@ export default function Footer(props:Props) {
               </svg>
             )}
       
-            {/* Shuffle icon */}
-            
+
           </>
         ]}
       
