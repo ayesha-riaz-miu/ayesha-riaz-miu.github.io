@@ -1,0 +1,27 @@
+{
+  "name": "hw4",
+  "version": "1.0.0",
+  "description": "In a new TS project (using `nodemon`, `ts-node`, and `@types/node` development dependencies): * Create a folder `/input` and place 10 high-resolution photos from [Pexels](https://www.pexels.com/). * Create an empty folder `/output`. * Read Node documentation to learn about [working with folders in Node](https://nodejs.org/en/learn/manipulating-files/working-with-folders-in-nodejs) using the `fs` core module. * Write a script read the images' name in both the `/input` and `/output` folders, and determine the difference between them (files that exist in `/input` but does not exist in `/output`). * If an image exists in `/input` and does not exist in `/output`, use [Sharp](https://www.npmjs.com/package/sharp) to resize the source image to a thumbnail size of 200 width, and save the thumbnail image in the `/output` directoty. * Use [Node Cron](https://www.npmjs.com/package/node-cron) to schedule a cron job using the following step value `*/30 * * * * *` that runs your script every 30 seconds.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.11.24",
+    "@types/node-cron": "^3.0.11",
+    "@types/nodemon": "^1.19.6",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.2.1",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0",
+    "sharp": "^0.33.2",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2"
+  }
+}
