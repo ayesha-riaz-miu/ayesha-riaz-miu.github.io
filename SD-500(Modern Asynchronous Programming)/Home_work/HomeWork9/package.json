@@ -1,0 +1,24 @@
+{
+  "name": "secondday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+     "type1":"nodemon type1.ts",
+     "type1class":"nodemon type1class.ts",
+     "type2":"nodemon type2.ts",
+     "type3":"nodemon type3.ts",
+     "type4":"nodemon type4.ts",
+     "type5":"nodemon type5.ts",
+     "type6":"nodemon type6.ts"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "fetch-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/prompts": "^2.4.9",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "cross-fetch": "^4.0.0",
+    "prompts": "^2.4.2"
+  }
+}
