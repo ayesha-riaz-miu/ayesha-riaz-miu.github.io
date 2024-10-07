@@ -1,0 +1,49 @@
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+
+{
+     "fullname":{
+        "first":"Ayesha",
+        "last":"Riaz"
+     },
+    "email": "ariaz@miu.edu",
+    "password": "1234"
+}
+###
+POST http://localhost:3000/users/signin
+Content-Type: application/json
+
+{
+    "email": "ariaz@miu.edu",
+    "password": "1234"
+}
+
+
+
+
+
+
+@STUDENT_ID=65f5239c1672216174477869
+@FILENAME=image.jpeg
+@FILE_FORM_NAME=myfile
+@FILE_MIME_TYPE=image/jpeg
+@FILE_ID=65f37f30e67cdc57f32399c8
+originalname: "guest.png",
+    
+###
+POST http://localhost:3000/users/{{STUDENT_ID}}/picture
+
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY0YzE3OWJiN2M3OGVlOGFlNmM3OWUiLCJmdWxsbmFtZSI6e30sImVtYWlsIjoiYXJpYXpAbWl1LmVkdSIsInByb2ZpbGVQaWN0dXJlUGF0aCI6ImltYWdlcy9ndWVzdC5wbmciLCJpYXQiOjE3MTA1NTM4Nzd9.ueMcyrwCIc3esMVzdc8-WR4vfV5aC9JFNwZdnCNMHIc
+                      
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="{{FILE_FORM_NAME}}"; filename="{{FILENAME}}"
+Content-Type: {{FILE_MIME_TYPE}}
+
+
+
+< ./{{FILENAME}}
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
