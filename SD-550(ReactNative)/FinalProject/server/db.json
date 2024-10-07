@@ -1,0 +1,297 @@
+{
+  "books": [
+    {
+      "id": "B001",
+      "title": "Understanding Algorithms",
+      "genre": "Education",
+      "category": "Computer Science",
+      "authorIDs": [
+        "A001",
+        "A002"
+      ],
+      "publisherId": "P001"
+    },
+    {
+      "id": "B002",
+      "title": "The Art of Programming",
+      "genre": "Technology",
+      "category": "Programming",
+      "authorIDs": [
+        "A003"
+      ],
+      "publisherId": "P002"
+    },
+    {
+      "id": "9ef0",
+      "title": "Ashyncrouns Programming",
+      "genre": "Programming",
+      "category": "Computer Science",
+      "authorIDs": "A001",
+      "publisherId": "P001"
+    },
+    {
+      "id": "4581",
+      "title": "C++",
+      "genre": "Programming",
+      "category": "Computer Science",
+      "authorIDs": [],
+      "publisherId": ""
+    },
+    {
+      "id": "84e0",
+      "title": "Java script",
+      "genre": "Technology",
+      "category": "Programming",
+      "authorIDs": "A002",
+      "publisherId": "P002"
+    },
+    {
+      "id": "9ca7",
+      "title": "Typescript programming",
+      "genre": "Programming",
+      "category": "Computer science",
+      "authorIDs": "A002",
+      "publisherId": "P002"
+    },
+    {
+      "id": "3523",
+      "title": "Java",
+      "genre": "Prgramming",
+      "category": "Computer science",
+      "authorIDs": "A001",
+      "publisherId": "P001"
+    },
+    {
+      "id": "e074",
+      "title": "Java123",
+      "genre": "Programming",
+      "category": "Computer science",
+      "authorIDs": "A001",
+      "publisherId": "P001"
+    }
+  ],
+  "authors": [
+    {
+      "id": "A001",
+      "name": "John Doe",
+      "phone": "123-456-7890",
+      "email": "john.doe@example.com"
+    },
+    {
+      "id": "A002",
+      "name": "Jane Smith",
+      "phone": "234-567-8901",
+      "email": "jane.smith@example.com"
+    },
+    {
+      "id": "A003",
+      "name": "Emily Johnson",
+      "phone": "345-678-9012",
+      "email": "emily.johnson@example.com"
+    },
+    {
+      "id": "7e04",
+      "name": "Ayesha33",
+      "phone": "123-123-123",
+      "email": "ariaz@miu.edu",
+      "address": ""
+    },
+    {
+      "id": "d7fa",
+      "name": "123",
+      "phone": "123-123-123",
+      "email": "defd@miu.edu"
+    }
+  ],
+  "publishers": [
+    {
+      "id": "P001",
+      "name": "TechBooks Publishing",
+      "phone": "456-789-0123",
+      "email": "contact@techbookspub.com",
+      "address": "123 Tech St, Silicon Valley, CA"
+    },
+    {
+      "id": "P002",
+      "name": "CodeWorld Publishers",
+      "phone": "567-890-1234",
+      "email": "info@codeworldpub.com",
+      "address": "234 Code Ave, Programmer City, TX"
+    }
+  ],
+  "catalogs": [
+    {
+      "id": "C001",
+      "bookId": "B001",
+      "numberOfCopies": 10,
+      "availableCopies": 8
+    },
+    {
+      "id": "C002",
+      "bookId": "B002",
+      "numberOfCopies": 5,
+      "availableCopies": 4
+    },
+    {
+      "id": "C003",
+      "bookId": "9ef0",
+      "numberOfCopies": 10,
+      "availableCopies": 5
+    },
+    {
+      "id": "456f",
+      "bookId": "9ca7",
+      "numberOfCopies": 10,
+      "availableCopies": 10
+    },
+    {
+      "id": "a628",
+      "bookId": null,
+      "numberOfCopies": 10,
+      "availableCopies": 10
+    },
+    {
+      "id": "7867",
+      "bookId": "3523",
+      "numberOfCopies": 2,
+      "availableCopies": 2
+    },
+    {
+      "id": "f9a9",
+      "bookId": "e074",
+      "numberOfCopies": 2,
+      "availableCopies": 1
+    }
+  ],
+  "members": [
+    {
+      "id": "M001",
+      "residentID": "S1001",
+      "firstname": "Alice",
+      "lastname": "Green",
+      "address": "789 Library Ln, Education Town, MA",
+      "phone": "678-901-2345",
+      "email": "alice.green@example.com"
+    },
+    {
+      "id": "M002",
+      "residentID": "S1002",
+      "firstname": "ayesha",
+      "lastname": "riaz",
+      "address": "789 Library Ln, Education Town, MA",
+      "phone": "678-901-2345",
+      "email": "alice.green@example.com"
+    },
+    {
+      "id": "e836",
+      "firstname": "zarwa",
+      "lastname": "Fatima",
+      "address": "Fairfield",
+      "phone": "123-789-765",
+      "email": "zarwa@miu.edu"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "T001",
+      "bookId": "B001",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-01",
+      "returnedDate": "2024-05-15"
+    },
+    {
+      "id": "T002",
+      "bookId": "B001",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-01",
+      "returnedDate": "2024-05-15"
+    },
+    {
+      "id": "69d4",
+      "bookId": "B002",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-20",
+      "returnedDate": "2024-05-20"
+    },
+    {
+      "id": "e97e",
+      "bookId": "B001",
+      "memberId": "M002",
+      "borrowedDate": "2024-05-20",
+      "returnedDate": "2024-05-20"
+    },
+    {
+      "id": "10a6",
+      "bookId": "B001",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-20",
+      "returnedDate": "2024-05-20"
+    },
+    {
+      "id": "f44c",
+      "bookId": "B001",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-20",
+      "returnedDate": "2024-05-20"
+    },
+    {
+      "id": "a00f",
+      "bookId": "B001",
+      "memberId": "M002",
+      "borrowedDate": "2024-05-20",
+      "returnedDate": "2024-05-20"
+    },
+    {
+      "id": "7f5f",
+      "bookId": "9ca7",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "2024-05-21"
+    },
+    {
+      "id": "4c64",
+      "bookId": "9ca7",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "2024-05-21"
+    },
+    {
+      "id": "1148",
+      "bookId": "9ca7",
+      "memberId": "e836",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "2024-05-21"
+    },
+    {
+      "id": "8f1a",
+      "bookId": "B001",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "2024-05-21"
+    },
+    {
+      "id": "f479",
+      "bookId": "e074",
+      "memberId": "M001",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "2024-05-21"
+    },
+    {
+      "id": "3695",
+      "bookId": "e074",
+      "memberId": "M002",
+      "borrowedDate": "2024-05-21",
+      "returnedDate": "null"
+    }
+  ],
+  "users": [
+    {
+      "id": "U001",
+      "name": "Peter",
+      "email": "peter@miu.edu"
+    },
+    {
+      "id": "6a3f"
+    }
+  ]
+}
